@@ -120,6 +120,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
         // Display the location of the current earthquake in that TextView
         primaryLocationView.setText(primaryLocation);
 
+        
         // Find the TextView with view ID location offset
         TextView locationOffsetView = (TextView) listItemView.findViewById(R.id.location_offset);
         // Display the location offset of the current earthquake in that TextView
