@@ -20,35 +20,35 @@ public class Earthquake {
         mUrl = url;
     }
 
-    public double getmMagnitude() {
+    public double getMagnitude() {
         return mMagnitude;
     }
 
-    public void setmMagnitude(double mMagnitude) {
+    public void setMagnitude(double mMagnitude) {
         this.mMagnitude = mMagnitude;
     }
 
-    public String getmLocation() {
+    public String getLocation() {
         return mLocation;
     }
 
-    public void setmLocation(String mLocation) {
+    public void setLocation(String mLocation) {
         this.mLocation = mLocation;
     }
 
-    public long getmTimeInMilliseconds() {
+    public long getTimeInMilliseconds() {
         return mTimeInMilliseconds;
     }
 
-    public void setmTimeInMilliseconds(long mTimeInMilliseconds) {
+    public void setTimeInMilliseconds(long mTimeInMilliseconds) {
         this.mTimeInMilliseconds = mTimeInMilliseconds;
     }
 
-    public String getmUrl() {
+    public String getUrl() {
         return mUrl;
     }
 
-    public void setmUrl(String mUrl) {
+    public void setUrl(String mUrl) {
         this.mUrl = mUrl;
     }
 }
