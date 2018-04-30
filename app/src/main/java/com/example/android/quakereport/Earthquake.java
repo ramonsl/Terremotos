@@ -13,6 +13,14 @@ public class Earthquake {
     private long mTimeInMilliseconds;
     private String mUrl;
 
+
+    public Earthquake(double magnitude, String location, long timeInMilliseconds) {
+        mMagnitude = magnitude;
+        mLocation = location;
+        mTimeInMilliseconds = timeInMilliseconds;
+
+    }
+
       public Earthquake(double magnitude, String location, long timeInMilliseconds, String url) {
         mMagnitude = magnitude;
         mLocation = location;

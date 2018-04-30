@@ -29,13 +29,6 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
-/**
- * An {@link EarthquakeAdapter} knows how to create a list item layout for each earthquake
- * in the data source (a list of {@link Earthquake} objects).
- *
- * These list item layouts will be provided to an adapter view like ListView
- * to be displayed to the user.
- */
 public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
 
     /**
@@ -60,26 +53,25 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
      */
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
-        // Check if there is an existing list item view (called convertView) that we can reuse,
-        // otherwise, if convertView is null, then inflate a new list item layout.
+        // Verifique se existe uma exibição de item de lista existente (chamada convertView) que podemos reutilizar,// caso contrário, se convertView for nulo, insira um novo layout de item de lista.
         View listItemView = convertView;
         if (listItemView == null) {
             listItemView = LayoutInflater.from(getContext()).inflate(
                     R.layout.earthquake_list_item, parent, false);
         }
 
-        // Find the earthquake at the given position in the list of earthquakes
+        // Encontre o terremoto na posição dada na lista de terremotos
         Earthquake currentEarthquake = getItem(position);
 
-        // Find the TextView with view ID magnitude
+        // Encontre o TextView com magnitude de ID da view
         TextView magnitudeView = (TextView) listItemView.findViewById(R.id.magnitude);
-        // Format the magnitude to show 1 decimal place
+        // Formata a magnitude para mostrar 1 casa decimal
         String formattedMagnitude = formatMagnitude(currentEarthquake.getMagnitude());
-        // Display the magnitude of the current earthquake in that TextView
+        // Exibe a magnitude do terremoto atual naquele TextView
         magnitudeView.setText(formattedMagnitude);
 
-        // Set the proper background color on the magnitude circle.
-        // Fetch the background from the TextView, which is a GradientDrawable.
+        // Defina a cor de fundo apropriada no círculo de magnitude.
+        // Busque o fundo do TextView, que é um GradientDrawable.
         GradientDrawable magnitudeCircle = (GradientDrawable) magnitudeView.getBackground();
         // Get the appropriate background color based on the current earthquake magnitude
         int magnitudeColor = getMagnitudeColor(currentEarthquake.getMagnitude());
@@ -148,7 +140,7 @@ public class EarthquakeAdapter extends ArrayAdapter<Earthquake> {
     }
 
     /**
-     * Return the color for the magnitude circle based on the intensity of the earthquake.
+     * Retorna a cor do cicrculo conforme a magnitude do terremoto
      *
      * @param magnitude of the earthquake
      */
